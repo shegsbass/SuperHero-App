@@ -17,21 +17,23 @@ val Typography = Typography(
     displayLarge = TextStyle(
         fontFamily = carbinFont,
         fontWeight = FontWeight.Normal,
-        fontSize = 36.sp
+        fontSize = 30.sp
     ),
     displayMedium = TextStyle(
         fontFamily = carbinFont,
         fontWeight = FontWeight.Bold,
         fontSize = 20.sp
     ),
-    labelSmall = TextStyle(
+    displaySmall = TextStyle(
         fontFamily = carbinFont,
         fontWeight = FontWeight.Bold,
-        fontSize = 14.sp
+        fontSize = 20.sp
     ),
     bodyLarge = TextStyle(
         fontFamily = carbinFont,
         fontWeight = FontWeight.Normal,
-        fontSize = 14.sp
+        fontSize = 16.sp,
+        lineHeight = 24.sp,
+        letterSpacing = 0.5.sp
     )
 )
