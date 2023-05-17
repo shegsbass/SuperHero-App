@@ -5,7 +5,9 @@ import androidx.annotation.StringRes
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
@@ -32,10 +34,10 @@ fun HeroList(
     heroList: List<Hero>,
     modifier: Modifier
 ){
-    LazyColumn(){
-        items(heroList){
-                hero -> Hero(hero, modifier.padding(horizontal = 16.dp, vertical = 8.dp))
-        }
+        LazyColumn(){
+            items(heroList){
+                    hero -> Hero(hero, modifier.padding(horizontal = 16.dp, vertical = 8.dp))
+            }
     }
 
 }
@@ -45,7 +47,6 @@ fun Hero(
     hero: Hero,
     modifier: Modifier = Modifier
 ){
-
         Card (
             elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
             modifier = modifier
@@ -69,7 +70,6 @@ fun Hero(
                     )
                 }
 
-
                 HeroImage(
                     heroImage = hero.heroImageResource,
                 modifier = Modifier
@@ -84,7 +84,6 @@ fun HeroInformation(
     @StringRes heroDesc: Int,
     modifier: Modifier = Modifier
 ){
-
         Text(
             text = stringResource(heroName),
             style = MaterialTheme.typography.displaySmall,
@@ -97,8 +96,6 @@ fun HeroInformation(
             modifier = Modifier
                 .padding(end = 16.dp)
         )
-
-
 }
 
 @Composable
@@ -115,7 +112,6 @@ fun HeroImage(
             .size(72.dp)
             .clip(MaterialTheme.shapes.small)
     )
-
 }
 
 @Preview(showBackground = true)
